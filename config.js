@@ -1,0 +1,3 @@
+window.TOURNAMENT_CONFIG = {
+  API_BASE_URL: "https://YOUR-RENDER-SERVICE.onrender.com/api"
+};

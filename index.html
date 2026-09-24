@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Tournament platform">
+<title>Tournament</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header><strong>TOURNAMENT</strong><nav><button data-tab="home">Home</button><button data-tab="tournaments">Tournaments</button><button data-tab="tasks">Tasks</button><button data-tab="wallet">Wallet</button><button id="logout">Logout</button></nav></header>
+<main>
+<section id="auth">
+<h1>Account</h1>
+<input id="phone" placeholder="Phone number" autocomplete="tel">
+<input id="password" type="password" placeholder="Password (10+ characters)" autocomplete="new-password">
+<input id="referral" placeholder="Referral code (optional)">
+<div><button id="register">Create account</button><button id="login">Login</button></div>
+<div id="verify" hidden><input id="userId" placeholder="User ID"><input id="smsCode" placeholder="SMS code"><button id="verifyBtn">Verify phone</button></div>
+<p id="msg"></p>
+</section>
+<section id="app" hidden>
+<div id="home" class="tab"><h1>Your account</h1><div class="card"><b>Tickets</b><span id="tickets">0</span></div><div class="card"><b>Prize balance</b><span id="balance">UGX 0</span></div><p>Your referral link: <code id="refLink"></code></p></div>
+<div id="tournaments" class="tab" hidden><h2>Tournaments</h2><div id="tlist"></div></div>
+<div id="tasks" class="tab" hidden><h2>Earn tickets</h2><p>Tasks are verified by the task provider. This page never self-credits tickets.</p></div>
+<div id="wallet" class="tab" hidden><h2>Withdraw</h2><input id="wdAmount" type="number" min="5000" placeholder="Amount UGX"><input id="wdPhone" placeholder="Mobile money number"><button id="withdraw">Request payout</button><p id="wdMsg"></p></div>
+</section>
+</main>
+<script src="./config.js"></script><script src="./app.js"></script>
+</body></html>
